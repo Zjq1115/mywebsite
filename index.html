@@ -10,20 +10,26 @@
 	<meta name="description" content="梦想成为庄稼地里的读书人.....">
 	<meta name="keywords" content="zyyo,YO,ZYYO,主页,ZYYO引导页">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="preload" href="./static/fonts/Ubuntu-Regular.ttf" as="font" type="font/ttf" crossorigin>
+	<link rel="preload" href="./static/fonts/Pacifico-Regular.ttf" as="font" type="font/ttf" crossorigin>
+	<link rel="preload" href="./static/img/background_shanguangdeng.png" as="image">
+	<link rel="preload" href="./static/img/me.jpg" as="image" fetchpriority="high">
+	<link rel="preload" href="./static/img/logo.png" as="image" fetchpriority="high">
+	<link rel="preload" href="./static/img/logokuang.png" as="image" fetchpriority="high">
 	<link rel="stylesheet" href="./static/css/style.css">
 	<link rel="stylesheet" href="./static/css/root.css">
 
 </head>
 
-<body>
+<body class="page-booting">
     <div id="clock" aria-live="polite"></div>
 	<div class="zyyo-filter"></div>
 
 	<div class="zyyo-main">
 		<div class="zyyo-left">
-			<div class="logo" style="background-image: url(./static/img/me.jpg);">
-				<img style="position: absolute;top:-20%;left:-10%;width: 120%; aspect-ratio: 1/1;"
-					src="./static/img/logokuang.png">
+				<div class="logo" style="background-image: url(./static/img/me.jpg);">
+					<img style="position: absolute;top:-20%;left:-10%;width: 120%; aspect-ratio: 1/1;"
+					src="./static/img/logokuang.png" alt="" decoding="async" fetchpriority="high">
 			</div>
 			
 			<div class="left-div left-des">
@@ -34,7 +40,7 @@
 			
 			<div class="left-div left-resume">
                 <a href="https://www.qmjianli.com/cvs/23413NJPLAUTRKW8" target="_blank" style="color: white; text-decoration: underline; font-size: 14px; display: flex; align-items: center; gap: 6px;">
-                    <img src="./static/img/个人简历.png" alt="" style="width: 22px; height: 22px;">我的简历
+                    <img src="./static/img/个人简历.png" alt="" style="width: 22px; height: 22px;" decoding="async">我的简历
                 </a>
             </div>
 			
@@ -77,7 +83,7 @@
 			<header>
 				<div class="index-logo" style="background-image: url(./static/img/logo.png);">
 					<img style="position: absolute;top:-15%;left:-10%;width: 120%; aspect-ratio: 1/1;"
-						src="./static/img/logokuang.png">
+						src="./static/img/logokuang.png" alt="" decoding="async" fetchpriority="high">
 				</div>
 				
 				<div class="welcome">
@@ -131,7 +137,7 @@
 				</div>
 
 				<div class="tanChiShe">
-					<img id="tanChiShe" src="./static/svg/snake-Light.svg" alt="">
+					<img id="tanChiShe" src="./static/svg/snake-Light.svg" alt="" decoding="async">
 				</div>
 			</header>
 
@@ -151,7 +157,7 @@
 							<!--<p>开发中...</p>-->
 						</div>
 						<div class="projectItemRight">
-							<img src="./static/img/zhinengti.png" alt="">
+							<img src="./static/img/zhinengti.png" alt="" loading="lazy" decoding="async">
 						</div>
 					</a>
 					
@@ -161,7 +167,7 @@
 							<!--<p>开发中...</p>-->
 						</div>
 						<div class="projectItemRight">
-							<img src="./static/img/llm.png" alt="">
+							<img src="./static/img/llm.png" alt="" loading="lazy" decoding="async">
 						</div>
 					</a>
 					
@@ -172,7 +178,7 @@
 							<!--<p>已完成</p>-->
 						</div>
 						<div class="projectItemRight">
-							<img src="./static/img/rag.png" alt="">
+							<img src="./static/img/rag.png" alt="" loading="lazy" decoding="async">
 						</div>
 					</a>
 					
@@ -182,7 +188,7 @@
 							<!--<p>Coming soon ...</p>-->
 						</div>
 						<div class="projectItemRight">
-							<img src="./static/img/Ollama1.png" alt="">
+							<img src="./static/img/Ollama1.png" alt="" loading="lazy" decoding="async">
 						</div>
 					</a>
 				</div>
@@ -199,7 +205,7 @@
 							<p>记录项目日常</p>
 						</div>
 						<div class="projectItemRight">
-							<img src="./static/img/github.png" alt="">
+							<img src="./static/img/github.png" alt="" loading="lazy" decoding="async">
 						</div>
 
 					</a><a class="projectItem a" target="_blank" href="https://github.com/Zjq1115/">
@@ -208,7 +214,7 @@
 							<p>存储收集文件</p>
 						</div>
 						<div class="projectItemRight">
-							<img src="./static/img/yunpan.png" alt="">
+							<img src="./static/img/yunpan.png" alt="" loading="lazy" decoding="async">
 						</div>
 
 					</a>
@@ -218,7 +224,7 @@
 							<p>我的课程资料，可自行下载使用</p>
 						</div>
 						<div class="projectItemRight">
-							<img src="./static/img/csdn.png" alt="">
+							<img src="./static/img/csdn.png" alt="" loading="lazy" decoding="async">
 						</div>
 
 					</a><a class="projectItem a" target="_blank" href="https://github.com/Zjq1115/">
@@ -227,7 +233,7 @@
 							<p>更新中...</p>
 						</div>
 						<div class="projectItemRight">
-							<img src="./static/img/biji.png" alt="">
+							<img src="./static/img/biji.png" alt="" loading="lazy" decoding="async">
 						</div>
 
 					</a></div>
@@ -241,8 +247,8 @@
 					skills
 				</div>
 				<div class="skill">
-					<img id="skillPc" src="./static/svg/skillPc.svg" alt="" srcset="">
-					<img id="skillWap" src="./static/svg/skillWap.svg" alt="" srcset="">
+					<img id="skillPc" src="./static/svg/skillPc.svg" alt="" loading="lazy" decoding="async">
+					<img id="skillWap" src="./static/svg/skillWap.svg" alt="" loading="lazy" decoding="async">
 				</div>
 			</content>
 		</div>
@@ -362,12 +368,9 @@
 	
 	
 </body>
-<script src="./static/js/script.js"> </script>
+<script src="./static/js/script.js" defer></script>
 
-<!-- 引入 marked.js 用于解析 Markdown 格式 -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({ id: "KFqltKSkJgQTGD9l", ck: "KFqltKSkJgQTGD9l" })</script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js" async
+	onload="window.LA&&LA.init({id:'KFqltKSkJgQTGD9l',ck:'KFqltKSkJgQTGD9l'})"></script>
 
 </html>

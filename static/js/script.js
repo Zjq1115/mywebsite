@@ -7,6 +7,23 @@ console.log(' %c  > ^ <', 'color: #8B4513; font-size: 20px;');
 console.log('  %c /  ~ \\', 'color: #8B4513; font-size: 20px;');
 console.log('  %c/______\\', 'color: #8B4513; font-size: 20px;');
 
+(function revealPageWhenReady() {
+    function reveal() {
+        document.body.classList.remove('page-booting');
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(reveal);
+        }, { once: true });
+    } else {
+        requestAnimationFrame(reveal);
+    }
+
+    window.addEventListener('load', reveal, { once: true });
+    setTimeout(reveal, 1200);
+})();
+
 document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 });
