@@ -1,4 +1,4 @@
-console.log('zjq.info',
+console.log('zhangjiaqi.info',
     'background-color: #ff00ff; color: white; font-size: 24px; font-weight: bold; padding: 10px;'
 );
 console.log('%c   /\\_/\\', 'color: #8B4513; font-size: 20px;');
@@ -467,7 +467,7 @@ const SYSTEM_PROMPT = `
 2. Easy Dataset × LLaMA Factory: 领域大模型微调工具。
 3. 基于LangChain的Agent智能体开发。
 4. Ollama & Chatbox 本地模型离线部署与交流可视化。
-5. 个人网站：zjq.info。
+5. 个人网站：zhangjiaqi.info。
 
 【链接】
 - Github: https://github.com/Zjq1115
