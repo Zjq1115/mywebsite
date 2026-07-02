@@ -447,7 +447,7 @@ window.addEventListener('load', function() {
 
 // ================= AI 客服组件 (DeepSeek 版) =================
 
-const AI_BACKEND_ENDPOINT = '';
+const AI_BACKEND_ENDPOINT = '/api/deepseek/chat/completions';
 
 // 定义 AI 的人设（System Prompt）
 const SYSTEM_PROMPT = `
@@ -535,7 +535,7 @@ async function sendNavChat() {
             throw new Error("AI service is not configured.");
         }
 
-        const response = await fetch('https://api.deepseek.com/chat/completions', {
+        const response = await fetch(AI_BACKEND_ENDPOINT, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -711,7 +711,7 @@ async function handleNavQuery() {
             throw new Error("AI service is not configured.");
         }
 
-        const response = await fetch('https://api.deepseek.com/chat/completions', {
+        const response = await fetch(AI_BACKEND_ENDPOINT, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
