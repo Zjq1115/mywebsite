@@ -437,14 +437,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })();
 });
 
-var pageLoading = document.querySelector("#zyyo-loading");
-window.addEventListener('load', function() {
-    setTimeout(function () {
-        if (pageLoading) pageLoading.style.opacity = '0';
-    }, 100);
-});
-
-
 // ================= AI 客服组件 (DeepSeek 版) =================
 
 const AI_BACKEND_ENDPOINT = '/api/deepseek/chat/completions';
