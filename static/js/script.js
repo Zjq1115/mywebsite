@@ -8,20 +8,35 @@ console.log('  %c /  ~ \\', 'color: #8B4513; font-size: 20px;');
 console.log('  %c/______\\', 'color: #8B4513; font-size: 20px;');
 
 (function revealPageWhenReady() {
+    var start = performance.now();
+    var revealed = false;
+
     function reveal() {
+        if (revealed) return;
+        revealed = true;
+
+        var delay = Math.max(0, 650 - (performance.now() - start));
+        setTimeout(function () {
+            requestAnimationFrame(function () {
+                document.body.classList.remove('page-booting');
+                document.body.classList.add('page-ready');
+            });
+        }, delay);
+    }
+
+    function fallbackReveal() {
         document.body.classList.remove('page-booting');
+        document.body.classList.add('page-ready');
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function () {
-            requestAnimationFrame(reveal);
-        }, { once: true });
+    if (document.readyState === 'complete') {
+        reveal();
     } else {
-        requestAnimationFrame(reveal);
+        window.addEventListener('load', reveal, { once: true });
     }
 
-    window.addEventListener('load', reveal, { once: true });
-    setTimeout(reveal, 1200);
+    setTimeout(reveal, 1400);
+    setTimeout(fallbackReveal, 2200);
 })();
 
 document.addEventListener('contextmenu', function (event) {
